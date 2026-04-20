@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청년 이혜원</title>
+
+<link href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Pretendard',sans-serif;}
+body{background:#f8fafc;color:#0f172a;}
+
+/* HERO */
+.hero{
+  min-height:50vh;
+  display:flex;
+  align-items:center;
+  padding:20px;
+  color:white;
+  background:linear-gradient(90deg,#1D4ED8 0%,#3B82F6 45%,rgba(59,130,246,0.2) 75%,rgba(255,255,255,0) 100%);
+}
+
+.hero-inner{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.hero-text{width:55%;}
+
+.hero h1{
+  font-size:64px;
+  font-weight:900;
+  line-height:1.2;
+}
+
+.hero p{
+  margin-top:18px;
+  font-size:22px;
+}
+
+.hero strong{
+  font-size:28px;
+  display:block;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  margin-right:10px;
+  padding:16px 28px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.main-btn{background:white;color:#1D4ED8;}
+
+.hero-img{width:45%;text-align:right;}
+
+.hero-img img{
+  width:420px;
+  margin-top:40px;
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+}
+
+/* SECTION */
+.section{padding:60px 20px;max-width:900px;margin:auto;}
+.section h2{font-size:26px;margin-bottom:20px;}
+
+.card{
+  background:#f1f5f9;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:15px;
+  cursor:pointer;
+  position:relative;
+}
+
+/* 공약 */
+.arrow{
+  position:absolute;
+  right:20px;
+  top:22px;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.card.active .arrow{transform:rotate(180deg);}
+
+.detail{
+  max-height:0;
+  overflow:hidden;
+  transition:0.3s;
+  margin-top:10px;
+  color:#475569;
+}
+
+.card.active .detail{max-height:300px;}
+
+/* 이미지 */
+.image-row{display:flex;gap:12px;}
+.image-row img{width:33.3%;border-radius:12px;}
+
+@media(max-width:600px){
+  .image-row{flex-direction:column;}
+  .image-row img{width:100%;}
+}
+
+/* 영상 */
+.video-wrap{max-width:800px;margin:auto;}
+.video-box{position:relative;padding-bottom:56.25%;}
+
+.video-box video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:12px;
+  object-fit:contain;
+}
+
+.sound-btn{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  border:none;
+  border-radius:20px;
+  padding:6px 10px;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* CTA */
+.cta{background:#1D4ED8;color:white;text-align:center;padding:60px 20px;}
+footer{text-align:center;padding:20px;background:#0f172a;color:white;}
+
+/* 🔥 플로팅 버튼 */
+.floating{
+  position:fixed;
+  right:15px;
+  bottom:30px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:999;
+}
+
+.floating a{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:20px;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  transition:0.2s;
+}
+
+.floating a:hover{transform:scale(1.1);}
+
+.phone{background:#22c55e;}
+.youtube{background:#ff3b3b;}
+.facebook{background:#1877f2;}
+
+/* 모바일 */
+@media(max-width:768px){
+  .hero-inner{flex-direction:column;text-align:center;}
+  .hero-text{width:100%;}
+  .hero-img{width:100%;text-align:center;}
+  .hero-img img{width:260px;}
+  .hero h1{font-size:34px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-text">
+      <h1>
+        떠나지 않아도 되는 여주<br>
+        다시 돌아오고 싶은 여주
+      </h1>
+
+      <p>
+        더불어민주당 여주시 비례대표 출마예정자<br>
+        <strong>여주청년 이혜원</strong>
+      </p>
+
+      <a href="#video" class="btn main-btn">🎥 소개영상 보기</a>
+      <a href="#policy" class="btn main-btn">📌 공약 확인하기</a>
+    </div>
+
+    <div class="hero-img">
+      <img src="photo-1.png">
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+  <h2>이혜원의 기준은 다릅니다</h2>
+
+  <div class="card">
+
+    <div class="image-row">
+      <img src="교육.jpg">
+      <img src="일.jpg">
+      <img src="용기.jpg">
+    </div>
+
+<div class="card" style="line-height:1.7;">
+
+ <strong>정치는 말이 아니라<br>
+ 결과로 증명하는 일입니다.</strong><br><br>
+
+  더불어민주당 여주시 정당선거사무소<br>
+  회계책임자로 끝까지 결과를 만들어 본 사람입니다.<br>
+ <strong>제 21대 대통령선거 이재명정부의 시작을 함께했습니다.</strong><br><br>
+
+  공공재산을 운영해 본 경험,<br>
+  예산을 검증할 수 있는 실무, 현장에서 살아온 시간까지<br>
+  <strong>준비는 끝났습니다.</strong><br><br>
+
+  <strong>떠나지 않아도 되는 여주,</strong><br>
+  <strong>다시 돌아오고 싶은 여주</strong><br>  
+  <strong>여주청년 이혜원이 꼭 만들겠습니다.</strong><br>
+</div>
+  </div>
+</section>
+
+<section id="policy" class="section">
+  <h2>핵심 공약</h2>
+<div class="card" onclick="toggle(this)">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <strong>💰 투명한 예산·책임 행정</strong>
+    <span class="arrow">▼</span>
+  </div>
+
+  <div class="detail">
+    시민의 세금이 제대로 쓰이도록 하겠습니다.<br><br>
+
+    - 예산 집행 과정 공개 확대 및 투명성 강화 조례 추진<br>
+    - 성과 중심 예산 심의 및 불필요한 사업 점검<br>
+    - 시민참여예산제 활성화를 통한 직접 참여 확대<br><br>
+
+    예산을 검증하는 시의원이 되겠습니다.
+  </div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <strong>🏡 청년 정착 기반 구축</strong>
+    <span class="arrow">▼</span>
+  </div>
+
+  <div class="detail">
+    청년이 여주에 정착할 수 있는 기반을 만들겠습니다.<br><br>
+
+    - 청년 월세 지원 및 공공임대 연계 확대를 위한 조례 추진<br>
+    - 귀농·귀촌 청년 주거 지원 정책 확대 요구<br>
+    - 청년 정착 지원 예산 확보 및 지속성 강화<br><br>
+
+    단기 지원이 아닌<br>
+    “정착 구조를 만드는 정책”을 만들겠습니다.
+  </div>
+</div>
+
+
+<div class="card" onclick="toggle(this)">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <strong>🚛 지역 연계 일자리 확대</strong>
+    <span class="arrow">▼</span>
+  </div>
+
+  <div class="detail">
+    여주 안에서 일할 수 있는 기반을 만들겠습니다.<br><br>
+
+    - 청년 채용 기업 인센티브 확대를 위한 제도 개선 추진<br>
+    - 지역 기업-청년 일자리 매칭 시스템 구축 요구<br>
+    - 공공사업 내 청년 참여 확대 및 우선 반영<br><br>
+
+    지역에서 일하고 성장하는 구조를 만들겠습니다.
+  </div>
+</div>
+
+
+<div class="card" onclick="toggle(this)">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <strong>🌱 청년 농업·6차 산업 육성</strong>
+    <span class="arrow">▼</span>
+  </div>
+
+  <div class="detail">
+    농업을 미래 산업으로 키우겠습니다.<br><br>
+
+    - 청년 농업인 창업 지원 및 스마트농업 예산 확대<br>
+    - 생산·가공·유통 연계 6차 산업 정책 지원 강화<br>
+    - 농산물 브랜드화 및 판로 확대 정책 추진<br><br>
+
+    농업을 지속 가능한 산업으로 전환하겠습니다.
+  </div>
+</div>
+
+
+<div class="card" onclick="toggle(this)">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <strong>🌙 교통 취약시간 이동권 개선</strong>
+    <span class="arrow">▼</span>
+  </div>
+
+  <div class="detail">
+    시민의 이동권을 강화하겠습니다.<br><br>
+
+    - 야간·주말 버스 노선 확대를 위한 예산 반영 요구<br>
+    - 수요응답형 교통(DRT) 확대 도입 추진<br>
+    - 교통 취약지역 맞춤형 이동 서비스 정책 제안<br><br>
+
+    이동권은 기본권이라는 기준으로 접근하겠습니다.
+  </div>
+</div>
+
+</section>
+</section>
+<!-- 영상 -->
+<section id="video" class="section">
+  <h2>소개 영상</h2>
+
+  <div class="video-wrap">
+    <div class="video-box">
+      <button class="sound-btn" onclick="toggleSound()">🔊</button>
+      <video id="video" src="main-bg.mp4" autoplay muted controls playsinline></video>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>청년의 도전이 여주의 변화를 시작합니다</h2>
+  <p>이혜원에게 힘을 모아주십시오</p>
+</section>
+
+<footer>© 청년 이혜원</footer>
+
+<!-- 🔥 플로팅 버튼 -->
+<div class="floating">
+  <a href="tel:01048083237" class="phone">📞</a>
+  <a href="https://www.youtube.com/@%EC%9D%B4%ED%98%9C%EC%9B%90TV" target="_blank" class="youtube">▶</a>
+  <a href="https://www.facebook.com/profile.php?id=61582088739118&locale=ko_KR" target="_blank" class="facebook">f</a>
+</div>
+
+<script>
+function toggle(el){
+  el.classList.toggle("active");
+}
+
+function toggleSound(){
+  const v=document.getElementById("video");
+  v.muted=!v.muted;
+}
+</script>
+
+</body>
+</html>
